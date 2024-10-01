@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27252a5bea05bc64a8eeecd9120e7e30, type: 3}
+  m_Name: RawMeatGI
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 8100513239808431187, guid: 90eb040f60dafca4a9d9581a17142aba, type: 3}
+  SpiteIcon: {fileID: 21300000, guid: 6a5fbdb354ba64e4a8247f16d16aac65, type: 3}
+  ItemInfo: Looks fresh...?
+  ItemName: Raw Meat
+  StackSize: 20
