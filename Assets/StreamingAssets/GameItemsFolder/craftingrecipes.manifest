@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 191790595
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 39c06403434411b479043bcd5fd2a219
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e3bd2c45eacc6e610186264d21596482
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 39c06403434411b479043bcd5fd2a219
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: c3753e0027543624f8470ae18b49c435, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: CraftingRecipe/Requirement
+- AssemblyName: Assembly-CSharp
+  ClassName: CraftingRecipe/Result
+Assets:
+- Assets/CraftingRecipes/IronSwordCR.asset
+Dependencies: []
