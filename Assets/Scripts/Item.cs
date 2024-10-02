@@ -22,6 +22,8 @@ public class Item : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public int freeslots;
     public GameItem gi;
     public GameObject cursorfollow;
+    public bool isHotBarLinked = false;
+    public Image HotbarLinked;
 
     
     // Start is called before the first frame update
@@ -38,7 +40,7 @@ public class Item : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             SlotImage.color = new Color(SlotImage.color.r, SlotImage.color.g, SlotImage.color.b, 1);
             
             SlotImage.sprite = gi.SpiteIcon;
-           
+            PotentialUpdateHotbar(1);
             if (isEmpty)
             {
                 freeslots = gi.StackSize;
@@ -64,6 +66,7 @@ public class Item : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         ImageOBJ.color = new Color(ImageOBJ.color.r, ImageOBJ.color.g, ImageOBJ.color.b, 0);
         SlotImage.color = new Color(SlotImage.color.r, SlotImage.color.g, SlotImage.color.b, 0);
         ItemCount.text = string.Empty;
+        PotentialUpdateHotbar(0);
 
     }
     public void Select()
@@ -93,6 +96,15 @@ public class Item : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             ImageOBJ.color = new Color(ImageOBJ.color.r, ImageOBJ.color.g, ImageOBJ.color.b, 0);
         }
         
+    }
+    void PotentialUpdateHotbar(int Transparent)
+    {
+        if (HotbarLinked)
+        {
+            HotbarLinked.sprite = SlotImage.sprite;
+            HotbarLinked.color = new Color(HotbarLinked.color.r, HotbarLinked.color.g, HotbarLinked.color.b, Transparent);
+        }
+            
     }
     bool Drag = false;
     public void OnPointerDown(PointerEventData ped)

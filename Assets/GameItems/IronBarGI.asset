@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27252a5bea05bc64a8eeecd9120e7e30, type: 3}
+  m_Name: IronBarGI
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 8100513239808431187, guid: b1cf70170e1d01345b6c86843ddc12be, type: 3}
+  SpiteIcon: {fileID: 21300000, guid: d7421991a1bcc104c99ab39e7c17ebe1, type: 3}
+  ItemInfo: Maybe I can make this harder...
+  ItemName: Iron Bar
+  StackSize: 10

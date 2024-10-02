@@ -20,7 +20,7 @@ public class Scrolling : MonoBehaviour
         }
         else if(scrollN > 0)
         {
-            Debug.Log((int)Input.GetAxis("Mouse ScrollWheel"));
+            
             if ((int)Input.GetAxis("Mouse ScrollWheel") > 0)
             {
                 scrollN = 0;
@@ -32,7 +32,7 @@ public class Scrolling : MonoBehaviour
         }
         else
         {
-            Debug.Log((int)Input.GetAxis("Mouse ScrollWheel"));
+            
             if ((int)Input.GetAxis("Mouse ScrollWheel") < 0)
             {
                 scrollN = 4;
