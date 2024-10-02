@@ -37,6 +37,11 @@ public class Inventory : MonoBehaviour
             isOpen = false;
         }
     }
+    public GameItem GetGameItem(string Name)
+    {
+        GameItem gi = gabi.LoadAsset<GameItem>(Name);
+        return gi;
+    }
     public void FindFreeSlots(int count, string ItemName, int i = 0)
     {
         for(; i < SortGO.transform.childCount; i++)

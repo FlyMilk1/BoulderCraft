@@ -9,12 +9,13 @@ public class CraftingRecipe : ScriptableObject
     [System.Serializable]
     public struct Requirement
     {
-        public GameItem Item;
+        public string Item;
         public int Count;
     }
+    [System.Serializable]
     public struct Result
     {
-        public GameItem Item;
+        public string Item;
         public int Count;
     }
 

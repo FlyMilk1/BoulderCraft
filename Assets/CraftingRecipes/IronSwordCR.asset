@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: IronSwordCR
   m_EditorClassIdentifier: 
   Required:
-  - Item: {fileID: 11400000, guid: 6fdfc8f4b51b82f44881abddc23030a4, type: 2}
+  - Item: IronBarGI
     Count: 5
-  - Item: {fileID: 11400000, guid: e289bf78aef11334590e3e385a99c09c, type: 2}
+  - Item: HandleGI
+    Count: 1
+  Results:
+  - Item: IronSwordGI
     Count: 1
