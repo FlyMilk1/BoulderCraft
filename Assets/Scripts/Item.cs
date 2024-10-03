@@ -24,6 +24,7 @@ public class Item : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public GameObject cursorfollow;
     public bool isHotBarLinked = false;
     public Image HotbarLinked;
+   
 
     
     // Start is called before the first frame update

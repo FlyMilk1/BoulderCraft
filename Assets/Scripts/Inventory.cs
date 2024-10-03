@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 public class Inventory : MonoBehaviour
 {
@@ -43,13 +44,36 @@ public class Inventory : MonoBehaviour
         GameItem gi = gabi.LoadAsset<GameItem>(Name);
         return gi;
     }
-    public void Search()
+    public struct GIAndCount
     {
-        List<Item> FoundItems;
+        public int Count;
+        public GameItem GI;
+        public int Slot;
+    }
+    public GIAndCount[] Search(string Name)
+    {
+        List<Item> FoundItems = new List<Item>();
+        List<GIAndCount> WantedItems = new List<GIAndCount>();
         for(int i=0; i < SortGO.transform.childCount; i++)
         {
-            FoundItems.Append<Item>(GameObject.Find("Item" + " (" + i + ")").GetComponent<Item>());
+            FoundItems.Add(GameObject.Find("Item" + " (" + i + ")").GetComponent<Item>());
         }
+        foreach (Item item in FoundItems)
+        {
+            if(item.gi != null)
+            {
+                if(item.gi.name == Name)
+                {
+                    GIAndCount gic;
+                    gic.Count = item.gi.StackSize - item.freeslots;
+                    gic.GI = item.gi;
+                    gic.Slot = FoundItems.IndexOf(item);
+                    WantedItems.Add(gic);
+                    Debug.Log("added to list gic");
+                }
+            }
+        }
+        return WantedItems.ToArray();
     }
     public void FindFreeSlots(int count, string ItemName, int i = 0)
     {
