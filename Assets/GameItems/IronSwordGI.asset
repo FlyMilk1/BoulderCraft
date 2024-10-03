@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IronSwordGI
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1287012685978632990, guid: b2d28d0504f38814bbf3c9d02b2c5199, type: 3}
-  SpiteIcon: {fileID: 21300000, guid: 40e70d370557c1246bb685078ca55e59, type: 3}
+  SpiteIcon: {fileID: 21300000, guid: 9f02ee2aca6345f4d974d6360900e4d3, type: 3}
   ItemInfo: 'Sturdy Sword. <color=#bfbfbf>BaseDMG: <color=yellow>15 <color=#bfbfbf>BonusDMG:
     <color=white>Creatures <color=green>+15%; <color=white>Trees <color=red>-25%'
   ItemName: Iron Sword
