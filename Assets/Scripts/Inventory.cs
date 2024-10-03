@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 public class Inventory : MonoBehaviour
 {
@@ -41,6 +42,14 @@ public class Inventory : MonoBehaviour
     {
         GameItem gi = gabi.LoadAsset<GameItem>(Name);
         return gi;
+    }
+    public void Search()
+    {
+        List<Item> FoundItems;
+        for(int i=0; i < SortGO.transform.childCount; i++)
+        {
+            FoundItems.Append<Item>(GameObject.Find("Item" + " (" + i + ")").GetComponent<Item>());
+        }
     }
     public void FindFreeSlots(int count, string ItemName, int i = 0)
     {
