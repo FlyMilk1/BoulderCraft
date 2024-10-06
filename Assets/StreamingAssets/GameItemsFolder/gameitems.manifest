@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1800532940
+CRC: 3420293199
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 42da3d684d8e5c18217f6677e0905795
+    Hash: e9353d9332d985ce5cf8c6361d1bb5d5
   TypeTreeHash:
     serializedVersion: 2
     Hash: 4380f9c983da1c70a64a28aeb89c2d82
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 42da3d684d8e5c18217f6677e0905795
+    Hash: e9353d9332d985ce5cf8c6361d1bb5d5
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -44,6 +44,7 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/GameItems/HandleGI.asset
 - Assets/GameItems/IronBarGI.asset
+- Assets/GameItems/OakWoodGI.asset
 - Assets/GameItems/IronAxeGI.asset
 - Assets/GameItems/RawMeatGI.asset
 - Assets/GameItems/IronSwordGI.asset

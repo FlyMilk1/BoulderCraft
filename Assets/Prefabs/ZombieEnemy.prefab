@@ -178,6 +178,12 @@ MonoBehaviour:
   MaxHealth: 100
   IsAvailable: 1
   Cooldown: 0.85
+  ItemDrops:
+  - ItemSprite: {fileID: 21300000, guid: 6a5fbdb354ba64e4a8247f16d16aac65, type: 3}
+    ItemNameWithGI: RawMeatGI
+    MinCount: 1
+    MaxCount: 2
+  ItemDropPrefab: {fileID: 1840537926514477036, guid: 396bf54a58580a54082c91330351bfec, type: 3}
 --- !u!58 &1020527286148599407
 CircleCollider2D:
   m_ObjectHideFlags: 0

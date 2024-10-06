@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static ResourceMine;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class EnemyHealth : MonoBehaviour
     public int MaxHealth = 100;
     public bool IsAvailable = true;
     public float Cooldown = 0.85f;
+    public ItemDropParms[] ItemDrops;
+    public GameObject ItemDropPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,17 @@ public class EnemyHealth : MonoBehaviour
         HealthSlider.value = Health;
         if (Health <= 0)
         {
+            foreach (var item in ItemDrops)
+            {
+                int r = Random.Range(item.MinCount, item.MaxCount + 1);
+                for (int i = 0; i < r; i++)
+                {
+                    GameObject CurItemDrop = Instantiate(ItemDropPrefab, transform.position, transform.rotation);
+                    CurItemDrop.GetComponent<ItemDrop>().ItemNameWithGI = item.ItemNameWithGI;
+                    CurItemDrop.GetComponent<SpriteRenderer>().sprite = item.ItemSprite;
+                }
+
+            }
             Destroy(HealthSlider.gameObject);
             Destroy(gameObject);
         }

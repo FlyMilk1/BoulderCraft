@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using static Inventory;
+using System.Linq;
+
 
 public class RecipeLoader : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class RecipeLoader : MonoBehaviour
     public GameObject CraftSort;
     public GameObject CraftReqs;
     public GameObject CraftDesc;
+    public Button CButton;
 
     public Inventory Inventory;
     CraftingRecipe[] CraftingRecipes;
@@ -53,11 +56,16 @@ public class RecipeLoader : MonoBehaviour
             Desc.GetComponentInChildren<TextMeshProUGUI>().text = GI.ItemName + " " + CraftingRecipes[index].Required[i].Count.ToString();
             Desc.GetComponentInChildren<Image>().sprite = GI.SpiteIcon;
         }
+        UseResourses(true);
         
     }
-    public void UseResourses()
+    public void UseResourses(bool IsCheck)
     {
-        bool HasReqs = true;
+        bool[] CheckBoolList = new bool[CraftingRecipes[CurrentIndex].Required.Length];
+        for(int i = 0; i < CraftingRecipes[CurrentIndex].Required.Length; i++)
+        {
+            CheckBoolList[i] = false;
+        }
         for(int i = 0; i<CraftingRecipes[CurrentIndex].Required.Length; i++)
         {
             int Left = CraftingRecipes[CurrentIndex].Required[i].Count;
@@ -85,8 +93,11 @@ public class RecipeLoader : MonoBehaviour
                     
                 }
                 Debug.Log(sum + "sum");
-                
                 if (sum >= Left)
+                {
+                    CheckBoolList[i] = true;
+                }
+                if (sum >= Left && IsCheck==false)
                 {
                     
 
@@ -121,22 +132,44 @@ public class RecipeLoader : MonoBehaviour
 
                         }
                     
-                    
+                        
                 }
-                else
-                {
-                    HasReqs = false;
-                }
+                
 
                 
             }
 
 
         }
-        for (int y = 0; y < CraftingRecipes[CurrentIndex].Results.Length; y++)
+        
+        bool AndCheck = true;
+        foreach (bool Check in CheckBoolList)
         {
-            Inventory.FindFreeSlots(CraftingRecipes[CurrentIndex].Results[y].Count, CraftingRecipes[CurrentIndex].Results[y].Item);
+            if (Check==false)
+            {
+                AndCheck = false;
+            }
         }
+        if(AndCheck)
+        {
+            CButton.interactable = true;
+        }
+        else
+        {
+            CButton.interactable = false;
+        }
+        if (IsCheck == false)
+        {
+            for (int y = 0; y < CraftingRecipes[CurrentIndex].Results.Length; y++)
+            {
+                Inventory.FindFreeSlots(CraftingRecipes[CurrentIndex].Results[y].Count, CraftingRecipes[CurrentIndex].Results[y].Item);
+
+            }
+            UseResourses(true);
+        }
+
+
+
 
     }
    

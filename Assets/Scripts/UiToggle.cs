@@ -8,6 +8,7 @@ public class UiToggle : MonoBehaviour
    public void OnMouseDown()
     {
         UI.SetActive(!UI.activeSelf);
+        
     }
     private void Update()
     {
@@ -16,6 +17,7 @@ public class UiToggle : MonoBehaviour
             if(Input.GetKeyUp(KeyCode.Escape))
             {
                 UI.SetActive(false);
+                
             }
         }
     }
