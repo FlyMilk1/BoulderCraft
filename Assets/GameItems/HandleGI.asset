@@ -16,4 +16,4 @@ MonoBehaviour:
   SpiteIcon: {fileID: 21300000, guid: 2f9f530bc900c4b4e9fbc6b088740b42, type: 3}
   ItemInfo: Has a good grip. Ideal for a tool.
   ItemName: Handle
-  StackSize: 1
+  StackSize: 5

@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 2510679036
+CRC: 184129763
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: gameitems
+      Dependencies: {}
+    Info_1:
+      Name: craftingrecipes
       Dependencies: {}

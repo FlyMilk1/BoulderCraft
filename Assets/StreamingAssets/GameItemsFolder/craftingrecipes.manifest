@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 191790595
+CRC: 299879510
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 39c06403434411b479043bcd5fd2a219
+    Hash: bc9667ae24f25d291a5b22fed52b8de1
   TypeTreeHash:
     serializedVersion: 2
     Hash: e3bd2c45eacc6e610186264d21596482
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 39c06403434411b479043bcd5fd2a219
+    Hash: bc9667ae24f25d291a5b22fed52b8de1
 HashAppended: 0
 ClassTypes:
 - Class: 114
@@ -22,5 +22,6 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: Assembly-CSharp
   ClassName: CraftingRecipe/Result
 Assets:
+- Assets/CraftingRecipes/IronAxeCR.asset
 - Assets/CraftingRecipes/IronSwordCR.asset
 Dependencies: []
